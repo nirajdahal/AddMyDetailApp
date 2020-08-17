@@ -28,24 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddName = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.NameLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.AddAge = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.NameInput = new System.Windows.Forms.TextBox();
+            this.AgeInput = new System.Windows.Forms.TextBox();
             this.AgeLabel = new System.Windows.Forms.Label();
             this.AddAddress = new System.Windows.Forms.Button();
+            this.AddressListBox = new System.Windows.Forms.ListBox();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.CancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // AddName
-            // 
-            this.AddName.Location = new System.Drawing.Point(517, 46);
-            this.AddName.Name = "AddName";
-            this.AddName.Size = new System.Drawing.Size(75, 23);
-            this.AddName.TabIndex = 0;
-            this.AddName.Text = "Add";
-            this.AddName.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -65,28 +57,19 @@
             this.NameLabel.TabIndex = 2;
             this.NameLabel.Text = "Name";
             // 
-            // textBox1
+            // NameInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(281, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 23);
-            this.textBox1.TabIndex = 3;
+            this.NameInput.Location = new System.Drawing.Point(281, 46);
+            this.NameInput.Name = "NameInput";
+            this.NameInput.Size = new System.Drawing.Size(276, 23);
+            this.NameInput.TabIndex = 3;
             // 
-            // AddAge
+            // AgeInput
             // 
-            this.AddAge.Location = new System.Drawing.Point(517, 96);
-            this.AddAge.Name = "AddAge";
-            this.AddAge.Size = new System.Drawing.Size(75, 23);
-            this.AddAge.TabIndex = 4;
-            this.AddAge.Text = "Add";
-            this.AddAge.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(281, 96);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 23);
-            this.textBox2.TabIndex = 3;
+            this.AgeInput.Location = new System.Drawing.Point(281, 96);
+            this.AgeInput.Name = "AgeInput";
+            this.AgeInput.Size = new System.Drawing.Size(276, 23);
+            this.AgeInput.TabIndex = 3;
             // 
             // AgeLabel
             // 
@@ -107,6 +90,35 @@
             this.AddAddress.TabIndex = 4;
             this.AddAddress.Text = "Add Address";
             this.AddAddress.UseVisualStyleBackColor = true;
+            this.AddAddress.Click += new System.EventHandler(this.AddAddress_Click);
+            // 
+            // AddressListBox
+            // 
+            this.AddressListBox.FormattingEnabled = true;
+            this.AddressListBox.ItemHeight = 15;
+            this.AddressListBox.Location = new System.Drawing.Point(244, 195);
+            this.AddressListBox.Name = "AddressListBox";
+            this.AddressListBox.Size = new System.Drawing.Size(362, 94);
+            this.AddressListBox.TabIndex = 5;
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Location = new System.Drawing.Point(341, 319);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(75, 23);
+            this.SaveBtn.TabIndex = 6;
+            this.SaveBtn.Text = "Save";
+            this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
+            // CancelBtn
+            // 
+            this.CancelBtn.Location = new System.Drawing.Point(456, 319);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.CancelBtn.TabIndex = 7;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.UseVisualStyleBackColor = true;
             // 
             // PersonDashboard
             // 
@@ -114,14 +126,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CancelBtn);
+            this.Controls.Add(this.SaveBtn);
+            this.Controls.Add(this.AddressListBox);
             this.Controls.Add(this.AddAddress);
-            this.Controls.Add(this.AddAge);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AgeInput);
+            this.Controls.Add(this.NameInput);
             this.Controls.Add(this.AgeLabel);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.AddName);
             this.Name = "PersonDashboard";
             this.Text = "PersonDashboard";
             this.ResumeLayout(false);
@@ -130,15 +143,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button AddName;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label NameLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button AddAge;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox NameInput;
+        private System.Windows.Forms.TextBox AgeInput;
         private System.Windows.Forms.Label AgeLabel;
         private System.Windows.Forms.Button AddAddress;
+        private System.Windows.Forms.ListBox AddressListBox;
+        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button CancelBtn;
     }
 }
 
