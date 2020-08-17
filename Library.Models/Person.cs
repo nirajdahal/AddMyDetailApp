@@ -11,6 +11,6 @@ namespace Library.Models
 
         public int Age { get; set; }
 
-        public Address Address { get; set; }
+        public List<Address> Address { get; set; }
     }
 }
